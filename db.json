@@ -1,0 +1,28 @@
+{
+  "buckets": [
+    {
+      "id": 1,
+      "name": "Entertainment Videos"
+    },
+    {
+      "id": 2,
+      "name": "Education Videos"
+    }
+  ],
+  "cards": [
+    {
+      "name": "afafawf",
+      "id": 3
+    }
+  ],
+  "history": [
+    {
+      "id": 3,
+      "name": "Card 3",
+      "link": "https://www.youtube.com/watch?v=olFEpeMwgHk",
+      "bucketId": 1,
+      "bucketName": "afsas",
+      "playedAt": "2015-3 "
+    }
+  ]
+}
