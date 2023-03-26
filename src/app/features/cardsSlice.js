@@ -12,6 +12,7 @@ const initialState = {
   error: null,
   cards: [],
   iframeLink: null,
+  editingCard: null,
 };
 export const cardsSlice = createSlice({
   name: "cards",
@@ -19,6 +20,9 @@ export const cardsSlice = createSlice({
   reducers: {
     setIframeLink: (state, value) => {
       state.iframeLink = value.payload;
+    },
+    setEditingCart: (state, value) => {
+      state.editingCard = value.payload;
     },
   },
   extraReducers: (builder) => {
@@ -53,5 +57,5 @@ export const cardsSlice = createSlice({
   },
 });
 
-export const { setIframeLink } = cardsSlice.actions;
+export const { setIframeLink, setEditingCart } = cardsSlice.actions;
 export default cardsSlice.reducer;

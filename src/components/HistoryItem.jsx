@@ -5,7 +5,11 @@ const HistoryItem = ({ history }) => {
   return (
     <div className="flex gap-2 items-center border-[1px] border-base-200 max-w-full rounded-md shadow-sm shadow-base-100 bg-primary w-full md:max-w-md">
       <div className="flex items-center justify-center p-4 pr-2">
-        <FcMusic size={50} />
+        {history.linkType === "audio" ? (
+          <FcMusic size={50} />
+        ) : (
+          <FcVideoFile size={50} />
+        )}
       </div>
       <div className="flex flex-col gap-2 p-4 pl-2">
         <span className="text-xl font-bold">{history?.cardName}</span>

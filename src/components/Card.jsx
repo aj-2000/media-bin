@@ -4,13 +4,12 @@ import { BiPlay, BiEdit } from "react-icons/bi";
 import { MdDelete } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { getAllCards, removeCard } from "../app/actions/cardsActions";
-import { AddBucket } from "./AddBucket";
 import { EditCard } from "./EditCard";
 import { addHistory } from "../app/actions/historyActions";
 import moment from "moment";
 import Iframe from "./Iframe";
-import ReactPlayer from "react-player";
-import { setIframeLink } from "../app/features/cardsSlice";
+
+import { setEditingCart, setIframeLink } from "../app/features/cardsSlice";
 
 const Card = ({ card }) => {
   const dispatch = useDispatch();
@@ -53,7 +52,13 @@ const Card = ({ card }) => {
             <span>Play</span>
           </label>
 
-          <label htmlFor="edit-card-modal" className="btn gap-2 btn-sm">
+          <label
+            onClick={() => {
+              dispatch(setEditingCart(card));
+            }}
+            htmlFor="edit-card-modal"
+            className="btn gap-2 btn-sm"
+          >
             <BiEdit size={20} />
             <span>Edit</span>
           </label>
@@ -84,7 +89,7 @@ const Card = ({ card }) => {
             ✕
           </label>
           <h3 className="text-lg font-bold">iFrame</h3>
-          <Iframe link={card.link} />
+          <Iframe linkType={card.linkType} />
         </div>
       </div>
       {/* Put this part before </body> tag */}
@@ -92,6 +97,9 @@ const Card = ({ card }) => {
       <div className="modal">
         <div className="modal-box relative  max-w-sm">
           <label
+            onClick={() => {
+              dispatch(setEditingCart(null));
+            }}
             htmlFor="edit-card-modal"
             className="btn btn-sm btn-circle absolute right-2 top-2 "
           >

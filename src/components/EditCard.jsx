@@ -2,7 +2,8 @@ import React, { useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addCard, getAllCards, updateCard } from "../app/actions/cardsActions";
 
-export const EditCard = ({ card }) => {
+export const EditCard = () => {
+  const card = useSelector((state) => state.cards.editingCard);
   const dispatch = useDispatch();
   const { buckets } = useSelector((state) => state.buckets);
   const nameRef = useRef(null);
@@ -11,6 +12,7 @@ export const EditCard = ({ card }) => {
   const linkTypeRef = useRef(null);
   useEffect(() => {
     if (nameRef) {
+      console.log(card);
       nameRef.current.value = card?.name;
     }
     if (bucketRef) {
@@ -22,7 +24,7 @@ export const EditCard = ({ card }) => {
     if (linkRef) {
       linkRef.current.value = card?.link;
     }
-  }, []);
+  }, [card]);
   const handleEditCard = () => {
     if (nameRef.current.value === "") {
       alert("name empty");

@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { client } from "../../services/axios";
 
 export const getAllCards = createAsyncThunk("cards/getAllCards", async () => {
-  const res = await client.get("cards");
+  const res = await client.get("cards?_sort=id&_order=desc");
   console.log(res.data);
   return res.data;
 });
