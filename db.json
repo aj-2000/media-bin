@@ -1,21 +1,27 @@
 {
   "buckets": [
     {
-      "id": 1,
-      "name": "Entertainment Videos"
+      "name": "Music",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Education Videos"
+      "name": "Video",
+      "id": 2
     }
   ],
   "cards": [
     {
-      "id": 3,
-      "name": "Card 3",
-      "link": "https://www.youtube.com/watch?v=olFEpeMwgHk",
-      "bucketId": 1,
-      "bucketName": "Entertainment Videos"
+      "name": "Video",
+      "bucketName": "Video",
+      "link": "https://www.youtube.com/watch?v=6cap2HiBFVQ",
+      "id": 1
+    },
+    {
+      "name": "kbhkb",
+      "bucketName": "Music",
+      "linkType": "audio",
+      "link": "jkbkjb",
+      "id": 2
     }
   ],
   "history": [
