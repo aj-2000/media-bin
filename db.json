@@ -11,8 +11,11 @@
   ],
   "cards": [
     {
-      "name": "afafawf",
-      "id": 3
+      "id": 3,
+      "name": "Card 3",
+      "link": "https://www.youtube.com/watch?v=olFEpeMwgHk",
+      "bucketId": 1,
+      "bucketName": "Entertainment Videos"
     }
   ],
   "history": [
@@ -21,8 +24,8 @@
       "name": "Card 3",
       "link": "https://www.youtube.com/watch?v=olFEpeMwgHk",
       "bucketId": 1,
-      "bucketName": "afsas",
-      "playedAt": "2015-3 "
+      "bucketName": "Entertainment Videos",
+      "playedAt": "2015-03-14"
     }
   ]
 }
