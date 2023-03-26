@@ -4,7 +4,7 @@ import { AddBucket } from "../AddBucket";
 import { AddCard } from "../AddCard";
 const Navbar = () => {
   return (
-    <navbar>
+    <>
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -49,10 +49,10 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex gap-4 items-center navbar-end">
-          <label htmlFor="add-card-modal" className="btn">
+          <label htmlFor="add-card-modal" className="btn btn-sm">
             Add Card
           </label>
-          <label htmlFor="add-bucket-modal" className="btn">
+          <label htmlFor="add-bucket-modal" className="btn btn-sm">
             Add Bucket
           </label>
         </div>
@@ -87,7 +87,7 @@ const Navbar = () => {
           <AddBucket />
         </div>
       </div>
-    </navbar>
+    </>
   );
 };
 

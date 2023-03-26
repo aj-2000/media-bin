@@ -1,37 +1,10 @@
 {
   "buckets": [
     {
-      "name": "Music",
+      "name": "fasfasfe",
       "id": 1
-    },
-    {
-      "name": "Video",
-      "id": 2
     }
   ],
-  "cards": [
-    {
-      "name": "Video",
-      "bucketName": "Video",
-      "link": "https://www.youtube.com/watch?v=6cap2HiBFVQ",
-      "id": 1
-    },
-    {
-      "name": "kbhkb",
-      "bucketName": "Music",
-      "linkType": "audio",
-      "link": "jkbkjb",
-      "id": 2
-    }
-  ],
-  "history": [
-    {
-      "id": 3,
-      "name": "Card 3",
-      "link": "https://www.youtube.com/watch?v=olFEpeMwgHk",
-      "bucketId": 1,
-      "bucketName": "Entertainment Videos",
-      "playedAt": "2015-03-14"
-    }
-  ]
+  "cards": [],
+  "histroy": []
 }
