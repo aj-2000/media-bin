@@ -11,11 +11,16 @@ const initialState = {
   loading: false,
   error: null,
   cards: [],
+  iframeLink: null,
 };
 export const cardsSlice = createSlice({
   name: "cards",
   initialState,
-  reducers: {},
+  reducers: {
+    setIframeLink: (state, value) => {
+      state.iframeLink = value.payload;
+    },
+  },
   extraReducers: (builder) => {
     // Add reducers for additional action types here, and handle loading state as needed
     builder.addCase(getAllCards.fulfilled, (state, action) => {
@@ -31,21 +36,22 @@ export const cardsSlice = createSlice({
       state.cards = [...state.cards.filter(({ id }) => id !== action.payload)];
     });
     builder.addCase(updateCard.fulfilled, (state, action) => {
-      state.cards = [
-        ...state.cards.map((obj) => {
-          if (obj.id === action.payload.id) {
-            return {
-              name: action.payload.data.name,
-              link: action.payload.data.link,
-              bucketId: action.payload.data.bucketId,
-              bucketName: action.payload.data.bucketName,
-            };
-          }
-          return obj;
-        }),
-      ];
+      // state.cards = [
+      //   ...state.cards.map((obj) => {
+      //     if (obj.id === action.payload.id) {
+      //       return {
+      //         name: action.payload.data.name,
+      //         link: action.payload.data.link,
+      //         linkType: action.payload.data.linkType,
+      //         bucketName: action.payload.data.bucketName,
+      //       };
+      //     }
+      //     return obj;
+      //   }),
+      // ];
     });
   },
 });
 
+export const { setIframeLink } = cardsSlice.actions;
 export default cardsSlice.reducer;
