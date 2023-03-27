@@ -37,7 +37,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl hidden md:block">
+          <a className="btn btn-ghost normal-case text-xl hidden lg:block">
             Convin
           </a>
         </div>

@@ -13,22 +13,7 @@
       "id": 3
     }
   ],
-  "cards": [
-    {
-      "name": "ajay",
-      "bucketName": "fafa",
-      "linkType": "video",
-      "link": "affafa",
-      "id": 2
-    },
-    {
-      "name": "fafa",
-      "bucketName": "fafafefaew",
-      "linkType": "audio",
-      "link": "fafa",
-      "id": 3
-    }
-  ],
+  "cards": [],
   "history": [
     {
       "cardName": "Sample Video",

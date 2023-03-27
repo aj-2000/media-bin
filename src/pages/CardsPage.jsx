@@ -16,6 +16,13 @@ export const CardsPage = () => {
       .catch((err) => {
         errorToast("Can not load cards");
       });
+    dispatch(getAllBuckets())
+      .then(() => {
+        successToast("All buckets loaded");
+      })
+      .catch((err) => {
+        errorToast("Can not load buckets");
+      });
   }, []);
   if (loading) {
     return (
