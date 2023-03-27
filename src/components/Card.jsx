@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { FcMusic, FcVideoFile } from "react-icons/fc";
 import { BiPlay, BiEdit } from "react-icons/bi";
 import { MdDelete } from "react-icons/md";
 import { useDispatch } from "react-redux";
-import { getAllCards, removeCard } from "../app/actions/cardsActions";
+import { removeCard } from "../app/actions/cardsActions";
 import { EditCard } from "./EditCard";
 import { addHistory } from "../app/actions/historyActions";
 import moment from "moment";

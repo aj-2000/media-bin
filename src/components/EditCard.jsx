@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addCard, getAllCards, updateCard } from "../app/actions/cardsActions";
+import { updateCard } from "../app/actions/cardsActions";
 import { errorToast, infoToast, successToast } from "../services/toast";
 
 export const EditCard = () => {
@@ -13,32 +13,32 @@ export const EditCard = () => {
   const linkTypeRef = useRef(null);
   useEffect(() => {
     if (nameRef) {
-      nameRef.current.value = card?.name;
+      nameRef.current.value = card?.name.trim();
     }
     if (bucketRef) {
-      bucketRef.current.value = card?.bucketName;
+      bucketRef.current.value = card?.bucketName.trim();
     }
     if (linkTypeRef) {
-      linkTypeRef.current.value = card?.linkType;
+      linkTypeRef.current.value = card?.linkType.trim();
     }
     if (linkRef) {
-      linkRef.current.value = card?.link;
+      linkRef.current.value = card?.link.trim();
     }
   }, [card]);
   const handleEditCard = () => {
-    if (nameRef.current.value === "") {
+    if (nameRef.current.value.trim() === "") {
       infoToast("Name empty");
       return;
     }
-    if (bucketRef.current.value === "") {
+    if (bucketRef.current.value.trim() === "") {
       infoToast("Bucket empty");
       return;
     }
-    if (linkTypeRef.current.value === "") {
+    if (linkTypeRef.current.value.trim() === "") {
       infoToast("Link type empty");
       return;
     }
-    if (linkRef.current.value === "") {
+    if (linkRef.current.value.trim() === "") {
       infoToast("Link empty");
       return;
     }
@@ -47,18 +47,18 @@ export const EditCard = () => {
       updateCard({
         id: card?.id,
         data: {
-          name: nameRef.current.value,
-          bucketName: bucketRef.current.value,
-          linkType: linkTypeRef.current.value,
-          link: linkRef.current.value,
+          name: nameRef.current.value.trim(),
+          bucketName: bucketRef.current.value.trim(),
+          linkType: linkTypeRef.current.value.trim(),
+          link: linkRef.current.value.trim(),
         },
       })
     )
       .then(() => {
-        successToast(`${nameRef.current.value} card updated`);
+        successToast(`${nameRef.current.value.trim()} card updated`);
       })
       .catch((err) => {
-        errorToast(`Error updating ${nameRef.current.value} card`);
+        errorToast(`Error updating ${nameRef.current.value.trim()} card`);
       });
   };
   return (

@@ -3,16 +3,23 @@ import { client } from "../../services/axios";
 export const getAllBuckets = createAsyncThunk(
   "buckets/getAllBuckets",
   async () => {
-    const res = await client.get("buckets");
-    return res.data;
+    try {
+      const res = await client.get("buckets");
+      return res.data;
+    } catch (error) {
+      console.log(error);
+    }
   }
 );
 
 export const addBucket = createAsyncThunk(
   "buckets/addBucket",
   async (bucket) => {
-    const res = await client.post("buckets", bucket);
-    console.log(res.data);
-    return res.data;
+    try {
+      const res = await client.post("buckets", bucket);
+      return res.data;
+    } catch (error) {
+      console.log(error);
+    }
   }
 );

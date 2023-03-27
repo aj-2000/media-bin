@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addCard, getAllCards } from "../app/actions/cardsActions";
+import { addCard } from "../app/actions/cardsActions";
 import { errorToast, infoToast, successToast } from "../services/toast";
 
 export const AddCard = () => {
@@ -11,39 +11,39 @@ export const AddCard = () => {
   const linkRef = useRef();
   const linkTypeRef = useRef();
   const handleAddCard = () => {
-    if (nameRef.current.value === "") {
+    if (nameRef.current.value.trim() === "") {
       infoToast("Name empty");
       return;
     }
-    if (bucketRef.current.value === "") {
+    if (bucketRef.current.value.trim() === "") {
       infoToast("Bucket empty");
       return;
     }
-    if (linkTypeRef.current.value === "") {
+    if (linkTypeRef.current.value.trim() === "") {
       infoToast("Link type empty");
       return;
     }
-    if (linkRef.current.value === "") {
+    if (linkRef.current.value.trim() === "") {
       infoToast("Link empty");
       return;
     }
 
     dispatch(
       addCard({
-        name: nameRef.current.value,
-        bucketName: bucketRef.current.value,
-        linkType: linkTypeRef.current.value,
-        link: linkRef.current.value,
+        name: nameRef.current.value.trim(),
+        bucketName: bucketRef.current.value.trim(),
+        linkType: linkTypeRef.current.value.trim(),
+        link: linkRef.current.value.trim(),
       })
     )
       .then(() => {
-        successToast(`${nameRef.current.value} Card added`);
+        successToast(`${nameRef.current.value.trim()} Card added`);
         nameRef.current.value = "";
         bucketRef.current.value = "";
         linkRef.current.value = "";
       })
       .catch((err) => {
-        errorToast(`Error adding ${nameRef.current.value} card`);
+        errorToast(`Error adding ${nameRef.current.value.trim()} card`);
       });
   };
   return (
@@ -64,7 +64,7 @@ export const AddCard = () => {
           <span className="label-text">Bucket</span>
         </label>
         <select className="select select-bordered" ref={bucketRef} required>
-          <option disabled value="">
+          <option disabled selected value={""}>
             Pick one
           </option>
           {buckets.map((bucket) => (

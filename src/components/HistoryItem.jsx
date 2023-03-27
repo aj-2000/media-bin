@@ -21,7 +21,7 @@ const HistoryItem = ({ history }) => {
         <div className="flex flex-col font-bold">
           <div>Bucket: {history?.bucketName}</div>
           <div>Played: {moment(history?.playedAt).fromNow()}</div>
-          <p className="max-w-xs text-clip overflow-scroll text-sm text-primary-content">
+          <p className="max-w-[200px] md:max-w-xs text-clip overflow-scroll text-sm text-primary-content">
             {history.link}
           </p>
         </div>

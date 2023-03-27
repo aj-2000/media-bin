@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
-import { addBucket, getAllBuckets } from "../app/actions/bucketsActions";
+import { addBucket } from "../app/actions/bucketsActions";
 import { errorToast, infoToast, successToast } from "../services/toast";
 
 export const AddBucket = () => {
@@ -23,10 +23,10 @@ export const AddBucket = () => {
       <div className="form-control w-full max-w-xs">
         <button
           onClick={() => {
-            if (bucketNameRef.current.value !== "") {
+            if (bucketNameRef.current.value.trim() !== "") {
               dispatch(
                 addBucket({
-                  name: bucketNameRef.current.value,
+                  name: bucketNameRef.current.value.trim(),
                 })
               )
                 .then(() => {
@@ -35,7 +35,7 @@ export const AddBucket = () => {
                 })
                 .catch((err) => {
                   errorToast(
-                    `Error adding ${bucketNameRef.current.value} bucket`
+                    `Error adding ${bucketNameRef.current.value.trim()} bucket`
                   );
                 });
             } else {

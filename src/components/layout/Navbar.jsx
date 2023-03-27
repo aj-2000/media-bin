@@ -1,9 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AddBucket } from "../AddBucket";
 import { AddCard } from "../AddCard";
 import { BsPlusLg } from "react-icons/bs";
 const Navbar = () => {
+  const { pathname } = useLocation();
+
   return (
     <>
       <div className="navbar bg-base-100">
@@ -29,24 +31,24 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
+              <li className={`${pathname === "/" && "bg-primary rounded-md"}`}>
                 <Link to="/">Cards</Link>
               </li>
-              <li>
+              <li className={`${pathname !== "/" && "bg-primary rounded-md"}`}>
                 <Link to="/history/">History</Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl hidden lg:block">
+          <a className="lg:flex btn btn-ghost normal-case text-xl hidden">
             Convin
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li>
+            <li className={`${pathname === "/" && "bg-primary rounded-md"}`}>
               <Link to="/">Cards</Link>
             </li>
-            <li>
+            <li className={`${pathname !== "/" && "bg-primary rounded-md"}`}>
               <Link to="/history/">History</Link>
             </li>
           </ul>
