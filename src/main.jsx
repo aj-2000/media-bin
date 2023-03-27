@@ -13,6 +13,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </BrowserRouter>
   </Provider>
 );
-// no cards, no history
-// toasts
-//
+

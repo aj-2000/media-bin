@@ -3,7 +3,6 @@ import { addBucket, getAllBuckets } from "../actions/bucketsActions";
 
 const initialState = {
   loading: false,
-  error: null,
   buckets: [],
 };
 const bucketsSlice = createSlice({
