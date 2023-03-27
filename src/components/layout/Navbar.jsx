@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AddBucket } from "../AddBucket";
 import { AddCard } from "../AddCard";
+import { BsPlusLg } from "react-icons/bs";
 const Navbar = () => {
   return (
     <>
@@ -36,7 +37,9 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">Convin</a>
+          <a className="btn btn-ghost normal-case text-xl hidden md:block">
+            Convin
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -49,11 +52,12 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex gap-4 items-center navbar-end">
-          <label htmlFor="add-card-modal" className="btn btn-sm">
-            Add Card
+          <label htmlFor="add-card-modal" className="btn btn-sm gap-2">
+            <BsPlusLg className="font-extrabold" size={20} /> <span>Card</span>
           </label>
-          <label htmlFor="add-bucket-modal" className="btn btn-sm">
-            Add Bucket
+          <label htmlFor="add-bucket-modal" className="btn btn-sm gap-2">
+            <BsPlusLg className="font-extrabold" size={20} />
+            <span>Bucket</span>
           </label>
         </div>
       </div>

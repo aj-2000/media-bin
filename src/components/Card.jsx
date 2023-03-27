@@ -10,6 +10,7 @@ import moment from "moment";
 import Iframe from "./Iframe";
 
 import { setEditingCart, setIframeLink } from "../app/features/cardsSlice";
+import { errorToast, successToast } from "../services/toast";
 
 const Card = ({ card }) => {
   const dispatch = useDispatch();
@@ -64,9 +65,13 @@ const Card = ({ card }) => {
           </label>
           <button
             onClick={() => {
-              dispatch(removeCard(card?.id)).then(() => {
-                dispatch(getAllCards());
-              });
+              dispatch(removeCard(card?.id))
+                .then(() => {
+                  successToast("Card deleted");
+                })
+                .catch(() => {
+                  errorToast("Error deleting card");
+                });
             }}
             className="btn btn-sm gap-2"
           >

@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addCard, getAllCards, updateCard } from "../app/actions/cardsActions";
+import { errorToast, infoToast, successToast } from "../services/toast";
 
 export const EditCard = () => {
   const card = useSelector((state) => state.cards.editingCard);
@@ -12,7 +13,6 @@ export const EditCard = () => {
   const linkTypeRef = useRef(null);
   useEffect(() => {
     if (nameRef) {
-      console.log(card);
       nameRef.current.value = card?.name;
     }
     if (bucketRef) {
@@ -27,19 +27,19 @@ export const EditCard = () => {
   }, [card]);
   const handleEditCard = () => {
     if (nameRef.current.value === "") {
-      alert("name empty");
+      infoToast("Name empty");
       return;
     }
     if (bucketRef.current.value === "") {
-      alert("bucket empty");
+      infoToast("Bucket empty");
       return;
     }
     if (linkTypeRef.current.value === "") {
-      alert("link type empty");
+      infoToast("Link type empty");
       return;
     }
     if (linkRef.current.value === "") {
-      alert("link empty");
+      infoToast("Link empty");
       return;
     }
 
@@ -53,10 +53,13 @@ export const EditCard = () => {
           link: linkRef.current.value,
         },
       })
-    ).then(() => {
-      console.log("updated");
-      dispatch(getAllCards());
-    });
+    )
+      .then(() => {
+        successToast(`${nameRef.current.value} card updated`);
+      })
+      .catch((err) => {
+        errorToast(`Error updating ${nameRef.current.value} card`);
+      });
   };
   return (
     <div className="flex flex-col gap-4">
@@ -76,7 +79,7 @@ export const EditCard = () => {
           <span className="label-text">Bucket</span>
         </label>
         <select className="select select-bordered" ref={bucketRef} required>
-          <option disabled selected value="">
+          <option disabled value="">
             Pick one
           </option>
           {buckets.map((bucket) => (
@@ -92,7 +95,7 @@ export const EditCard = () => {
           <span className="label-text">Link type</span>
         </label>
         <select className="select select-bordered" ref={linkTypeRef} required>
-          <option disabled selected value="">
+          <option disabled value="">
             Pick one
           </option>
           <option value="audio"> Audio </option>

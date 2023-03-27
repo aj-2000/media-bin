@@ -697,6 +697,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clsx@npm:^1.1.1":
+  version: 1.2.1
+  resolution: "clsx@npm:1.2.1"
+  checksum: cae17fd0fd5ea449d000c681169a8a6f7add4929b369cae3e2d5b604fba2798b39334121e467dbf6ac752562c28a6894a443f30761b004317c0668eb031af52d
+  languageName: node
+  linkType: hard
+
 "color-convert@npm:^2.0.1":
   version: 2.0.1
   resolution: "color-convert@npm:2.0.1"
@@ -783,6 +790,7 @@ __metadata:
     react-icons: "npm:^4.8.0"
     react-redux: "npm:^8.0.5"
     react-router-dom: "npm:^6.9.0"
+    react-toastify: "npm:^9.1.2"
     redux-thunk: "npm:^2.4.2"
     tailwindcss: "npm:^3.2.7"
     vite: "npm:^4.2.0"
@@ -1963,6 +1971,18 @@ __metadata:
   peerDependencies:
     react: ">=16.8"
   checksum: 9fce0afd7ec156a983bd433ecfbcb6f3ce6f1b2863a216245c6dffeff3c27daceecfdb903bcf3f3e53ff03a235dda373b40a7f18cd260de909da324c97c5eecd
+  languageName: node
+  linkType: hard
+
+"react-toastify@npm:^9.1.2":
+  version: 9.1.2
+  resolution: "react-toastify@npm:9.1.2"
+  dependencies:
+    clsx: "npm:^1.1.1"
+  peerDependencies:
+    react: ">=16"
+    react-dom: ">=16"
+  checksum: be47f5e35db36c38dc8c61419e6c3b33411d38628bc6a838b0662efd6f4ad20fc8602146b8ea7254fdfaf5ece10edbbec5f92aacdbac8e75629c0f35fe82e46d
   languageName: node
   linkType: hard
 

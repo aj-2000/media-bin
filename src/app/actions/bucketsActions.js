@@ -12,6 +12,7 @@ export const addBucket = createAsyncThunk(
   "buckets/addBucket",
   async (bucket) => {
     const res = await client.post("buckets", bucket);
-    return bucket;
+    console.log(res.data);
+    return res.data;
   }
 );

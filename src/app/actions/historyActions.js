@@ -12,6 +12,6 @@ export const addHistory = createAsyncThunk(
   "history/addHistory",
   async (history) => {
     const res = await client.post("history", history);
-    return bucket;
+    return res.data;
   }
 );

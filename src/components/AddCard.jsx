@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addCard, getAllCards } from "../app/actions/cardsActions";
+import { errorToast, infoToast, successToast } from "../services/toast";
 
 export const AddCard = () => {
   const dispatch = useDispatch();
@@ -11,19 +12,19 @@ export const AddCard = () => {
   const linkTypeRef = useRef();
   const handleAddCard = () => {
     if (nameRef.current.value === "") {
-      alert("name empty");
+      infoToast("Name empty");
       return;
     }
     if (bucketRef.current.value === "") {
-      alert("bucket empty");
+      infoToast("Bucket empty");
       return;
     }
     if (linkTypeRef.current.value === "") {
-      alert("link type empty");
+      infoToast("Link type empty");
       return;
     }
     if (linkRef.current.value === "") {
-      alert("link empty");
+      infoToast("Link empty");
       return;
     }
 
@@ -34,12 +35,16 @@ export const AddCard = () => {
         linkType: linkTypeRef.current.value,
         link: linkRef.current.value,
       })
-    ).then(() => {
-      nameRef.current.value = "";
-      bucketRef.current.value = "";
-      linkRef.current.value = "";
-      dispatch(getAllCards());
-    });
+    )
+      .then(() => {
+        successToast(`${nameRef.current.value} Card added`);
+        nameRef.current.value = "";
+        bucketRef.current.value = "";
+        linkRef.current.value = "";
+      })
+      .catch((err) => {
+        errorToast(`Error adding ${nameRef.current.value} card`);
+      });
   };
   return (
     <div className="flex flex-col gap-4">
@@ -59,7 +64,7 @@ export const AddCard = () => {
           <span className="label-text">Bucket</span>
         </label>
         <select className="select select-bordered" ref={bucketRef} required>
-          <option disabled selected value="">
+          <option disabled value="">
             Pick one
           </option>
           {buckets.map((bucket) => (
@@ -75,7 +80,7 @@ export const AddCard = () => {
           <span className="label-text">Link type</span>
         </label>
         <select className="select select-bordered" ref={linkTypeRef} required>
-          <option disabled selected value="">
+          <option disabled value="">
             Pick one
           </option>
           <option value="audio"> Audio </option>

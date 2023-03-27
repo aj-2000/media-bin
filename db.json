@@ -1,10 +1,106 @@
 {
   "buckets": [
     {
-      "name": "Sample",
+      "name": "hello",
       "id": 1
+    },
+    {
+      "name": "fafafefaew",
+      "id": 2
+    },
+    {
+      "name": "fafa",
+      "id": 3
     }
   ],
-  "cards": [],
-  "history": []
+  "cards": [
+    {
+      "name": "ajay",
+      "bucketName": "fafa",
+      "linkType": "video",
+      "link": "affafa",
+      "id": 2
+    },
+    {
+      "name": "fafa",
+      "bucketName": "fafafefaew",
+      "linkType": "audio",
+      "link": "fafa",
+      "id": 3
+    }
+  ],
+  "history": [
+    {
+      "cardName": "Sample Video",
+      "linkType": "video",
+      "link": "https://bestvpn.org/html5demos/assets/dizzy.mp4",
+      "bucketName": "Sample",
+      "playedAt": "2023-03-27T10:17:30.603Z",
+      "id": 1
+    },
+    {
+      "cardName": "fa",
+      "linkType": "audio",
+      "link": "faf",
+      "bucketName": "Sample",
+      "playedAt": "2023-03-27T13:43:42.127Z",
+      "id": 2
+    },
+    {
+      "cardName": "fa",
+      "linkType": "audio",
+      "link": "faf",
+      "bucketName": "Sample",
+      "playedAt": "2023-03-27T13:45:12.976Z",
+      "id": 3
+    },
+    {
+      "cardName": "fa",
+      "linkType": "audio",
+      "link": "faf",
+      "bucketName": "Sample",
+      "playedAt": "2023-03-27T13:45:19.325Z",
+      "id": 4
+    },
+    {
+      "cardName": "fafa",
+      "linkType": "audio",
+      "link": "fafafaf",
+      "bucketName": "hello",
+      "playedAt": "2023-03-27T13:50:06.787Z",
+      "id": 5
+    },
+    {
+      "cardName": "fafa",
+      "linkType": "audio",
+      "link": "fafafaf",
+      "bucketName": "hello",
+      "playedAt": "2023-03-27T13:50:18.401Z",
+      "id": 6
+    },
+    {
+      "cardName": "sdfafafa",
+      "linkType": "audio",
+      "link": "fafa",
+      "bucketName": "fafa",
+      "playedAt": "2023-03-27T14:02:09.989Z",
+      "id": 7
+    },
+    {
+      "cardName": "sdfafafa",
+      "linkType": "audio",
+      "link": "fafa",
+      "bucketName": "fafa",
+      "playedAt": "2023-03-27T14:02:40.888Z",
+      "id": 8
+    },
+    {
+      "cardName": "sdfafafa",
+      "linkType": "audio",
+      "link": "fafa",
+      "bucketName": "fafa",
+      "playedAt": "2023-03-27T14:03:03.588Z",
+      "id": 9
+    }
+  ]
 }

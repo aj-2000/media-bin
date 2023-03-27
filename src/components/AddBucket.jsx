@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { addBucket, getAllBuckets } from "../app/actions/bucketsActions";
+import { errorToast, infoToast, successToast } from "../services/toast";
 
 export const AddBucket = () => {
   const bucketNameRef = useRef();
@@ -27,13 +28,18 @@ export const AddBucket = () => {
                 addBucket({
                   name: bucketNameRef.current.value,
                 })
-              ).then(() => {
-                bucketNameRef.current.value = "";
-                alert("bucket added successfully");
-                dispatch(getAllBuckets());
-              });
+              )
+                .then(() => {
+                  successToast(`${bucketNameRef.current.value} bucket added`);
+                  bucketNameRef.current.value = "";
+                })
+                .catch((err) => {
+                  errorToast(
+                    `Error adding ${bucketNameRef.current.value} bucket`
+                  );
+                });
             } else {
-              alert("Bucket name cannot be empty");
+              infoToast("Bucket name cannot be empty");
             }
           }}
           className="btn btn-sm"

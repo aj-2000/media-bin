@@ -11,14 +11,26 @@ const bucketsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    // Add reducers for additional action types here, and handle loading state as needed
+    builder.addCase(getAllBuckets.pending, (state, action) => {
+      state.loading = true;
+    });
     builder.addCase(getAllBuckets.fulfilled, (state, action) => {
-      // Add user to the state array
       state.buckets = [...action.payload];
+      state.loading = false;
+    });
+    builder.addCase(getAllBuckets.rejected, (state, action) => {
+      state.buckets = [...action.payload];
+      state.loading = false;
+    });
+    builder.addCase(addBucket.pending, (state, action) => {
+      state.loading = true;
     });
     builder.addCase(addBucket.fulfilled, (state, action) => {
-      // Add user to the state array
       state.buckets = [action.payload, ...state.buckets];
+      state.loading = false;
+    });
+    builder.addCase(addBucket.rejected, (state, action) => {
+      state.loading = false;
     });
   },
 });
