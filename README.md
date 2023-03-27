@@ -58,6 +58,8 @@ This will start the development server on `http://localhost:5173/`
 - [Repo](https://github.com/aj-2000/convin-json)
 - [Deployed Backend](https://convin-json-production.up.railway.app/)
 
+NOTE: Configure this link to your project by changing url in /src/services/axios.js file.
+
 ### License
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
