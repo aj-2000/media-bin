@@ -1,8 +1,8 @@
 # Convin
 
-### This is a web application built with ReactJS that allows users to create, edit and delete cards containing video/mp3 links under customizable buckets. The application also includes the functionality to move cards from one bucket to another, view card history, and delete single or multiple cards.
+This is a web application built with ReactJS that allows users to create, edit and delete cards containing video/mp3 links under customizable buckets. The application also includes the functionality to move cards from one bucket to another, view card history, and delete single or multiple cards.
 
-## Tech Stack
+### Tech Stack
 
 - React
 - Redux / Redux Toolkit / Redux Thunk
@@ -11,7 +11,7 @@
 - Json Server
 - React Toastify
 
-## Features
+### Features
 
 - Create, edit and delete cards containing video/mp3 links
 - Categorize cards under customizable buckets
@@ -19,41 +19,45 @@
 - View card history
 - Delete single or multiple cards at once
 
-## Getting Started
+### Getting Started
 
-### To get started with this project, follow these steps:
+To get started with this project, follow these steps:
 
-## Installation
+### Installation
 
-### Clone the repository and install dependencies using the following commands:
-
-```sh
-git clone https://github.com/{username}/{repository-name}.git
-cd {repository-name}
-npm install
-```
-
-## Usage
-
-### 1. Start the json server by running the following command:
+Clone the repository and install dependencies using the following commands:
 
 ```sh
-npm run json-server
+git clone https://github.com/aj-2000/convin-redux-thunk.git
+cd convin-redux-thunk
+yarn
 ```
 
-### This will start the json server on `http://localhost:8000`
+### Usage
 
-### 2. Start the development server by running the following command:
+1. Start the json server by running the following command:
 
 ```sh
-npm run dev
+yarn json-server
 ```
 
-### This will start the development server on `http://localhost:3000
+This will start the json server on `http://localhost:8000`
 
-`
+2. Start the development server by running the following command:
 
-### 3. Open the application in your browser by visiting `http://localhost:3000`
+```sh
+yarn dev
+```
 
-License
+This will start the development server on `http://localhost:3000`
+
+3. Open the application in your browser by visiting `http://localhost:3000`
+
+### Deployed JSON-Server Backend Repo
+
+- [Repo](https://github.com/aj-2000/convin-json)
+- [Deployed Backend](https://convin-json-production.up.railway.app/)
+
+### License
+
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
