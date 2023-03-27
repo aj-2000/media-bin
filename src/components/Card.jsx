@@ -49,7 +49,7 @@ const Card = ({ card }) => {
             }}
             className="btn btn-sm gap-2"
           >
-            <BiPlay size={25} />
+            <BiPlay className="hidden md:block" size={25} />
             <span>Play</span>
           </label>
 
@@ -60,7 +60,7 @@ const Card = ({ card }) => {
             htmlFor="edit-card-modal"
             className="btn gap-2 btn-sm"
           >
-            <BiEdit size={20} />
+            <BiEdit className="hidden md:block" size={20} />
             <span>Edit</span>
           </label>
           <button
@@ -75,7 +75,7 @@ const Card = ({ card }) => {
             }}
             className="btn btn-sm gap-2"
           >
-            <MdDelete size={20} />
+            <MdDelete className="hidden md:block" size={20} />
             <span>Delete</span>
           </button>
         </div>
