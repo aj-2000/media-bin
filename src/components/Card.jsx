@@ -26,7 +26,7 @@ const Card = ({ card }) => {
     );
   };
   return (
-    <div className="flex gap-2 items-center border-[1px] border-base-200 max-w-md rounded shadow-sm shadow-base-100 bg-primary">
+    <div className="flex gap-2 items-center border-[1px] border-base-200 max-w-md rounded shadow-sm shadow-base-100 bg-base-300">
       <div className="flex items-center justify-center p-4 pr-2">
         {card.linkType === "audio" ? (
           <FcMusic size={50} />
@@ -36,7 +36,7 @@ const Card = ({ card }) => {
       </div>
       <div className="flex flex-col gap-4 p-4 pl-2">
         <div className="flex flex-col gap-2">
-          <div className="text-xl font-bold">{card?.name}</div>
+          <div className="text-2xl font-bold text-secondary">{card?.name}</div>
           <div className="text-md font-bold">{card?.bucketName}</div>
         </div>
 
