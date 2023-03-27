@@ -6,46 +6,5 @@
     }
   ],
   "cards": [],
-  "history": [
-    {
-      "cardName": "Sample Video",
-      "linkType": "video",
-      "link": "https://bestvpn.org/html5demos/assets/dizzy.mp4",
-      "bucketName": "Sample",
-      "playedAt": "2023-03-26T22:02:11.795Z",
-      "id": 1
-    },
-    {
-      "cardName": "Sample Video",
-      "linkType": "video",
-      "link": "https://bestvpn.org/html5demos/assets/dizzy.mp4",
-      "bucketName": "Sample",
-      "playedAt": "2023-03-26T22:02:36.344Z",
-      "id": 2
-    },
-    {
-      "cardName": "Sample Audio",
-      "linkType": "audio",
-      "link": "https://assets.mixkit.co/active_storage/sfx/2565/2565.wav",
-      "bucketName": "Sample",
-      "playedAt": "2023-03-26T22:02:38.777Z",
-      "id": 3
-    },
-    {
-      "cardName": "Sample Audio 2",
-      "linkType": "audio",
-      "link": "https://assets.mixkit.co/active_storage/sfx/2565/2565.wav",
-      "bucketName": "Sample",
-      "playedAt": "2023-03-26T22:05:40.763Z",
-      "id": 4
-    },
-    {
-      "cardName": "Sample Video 3",
-      "linkType": "video",
-      "link": "https://bestvpn.org/html5demos/assets/dizzy.mp4",
-      "bucketName": "Sample",
-      "playedAt": "2023-03-26T22:05:43.910Z",
-      "id": 5
-    }
-  ]
+  "history": []
 }

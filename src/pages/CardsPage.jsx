@@ -31,8 +31,22 @@ export const CardsPage = () => {
       getAllCards();
     });
   }, []);
+  if (bucketsLoading || cardsLoading) {
+    return (
+      <div className="flex w-full mt-[40vh] justify-center items-center text-4xl font-bold text-gray-400">
+        Loading...
+      </div>
+    );
+  }
+  if (cards.length === 0) {
+    return (
+      <div className="flex w-full mt-[40vh] justify-center items-center text-4xl font-bold text-gray-400">
+        No Cards Found
+      </div>
+    );
+  }
   return (
-    <div className="flex w-full flex-wrap justify-center items-center gap-8 md:p-8">
+    <div className="flexflex-wrap justify-center items-center gap-8 md:p-8">
       {cards.map((card) => (
         <Card key={card.id} card={card} />
       ))}
