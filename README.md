@@ -16,8 +16,8 @@ This is a web application built with ReactJS that allows users to create, edit a
 - Create, edit and delete cards containing video/mp3 links
 - Categorize cards under customizable buckets
 - Move cards between buckets
-- View card history
-- Delete single or multiple cards at once
+- View card play history
+- Delete cards
 
 ### Getting Started
 
@@ -49,9 +49,9 @@ This will start the json server on `http://localhost:8000`
 yarn dev
 ```
 
-This will start the development server on `http://localhost:3000`
+This will start the development server on `http://localhost:5173/`
 
-3. Open the application in your browser by visiting `http://localhost:3000`
+3. Open the application in your browser by visiting `http://localhost:5173/`
 
 ### Deployed JSON-Server Backend Repo
 
