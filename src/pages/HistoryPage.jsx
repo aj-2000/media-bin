@@ -1,21 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllHistory } from "../app/actions/historyActions";
 import HistoryItem from "../components/HistoryItem";
-import { errorToast, successToast } from "../services/toast";
 
 export const HistoryPage = () => {
   const { history, loading } = useSelector((state) => state.history);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getAllHistory())
-      .then(() => {
-        successToast("All history loaded");
-      })
-      .catch((err) => {
-        errorToast("Can not load history.");
-      });
-  }, []);
   if (loading) {
     return (
       <div className="flex w-full mt-[40vh] justify-center items-center text-4xl font-bold text-gray-400">

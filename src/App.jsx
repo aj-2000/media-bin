@@ -7,6 +7,8 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getAllBuckets } from "./app/actions/bucketsActions";
 import { errorToast, successToast } from "./services/toast";
+import { getAllCards } from "./app/actions/cardsActions";
+import { getAllHistory } from "./app/actions/historyActions";
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -16,6 +18,20 @@ function App() {
       })
       .catch((err) => {
         errorToast("Can not load buckets");
+      });
+    dispatch(getAllCards())
+      .then(() => {
+        successToast("All cards loaded");
+      })
+      .catch((err) => {
+        errorToast("Can not load cards");
+      });
+    dispatch(getAllHistory())
+      .then(() => {
+        successToast("All history loaded");
+      })
+      .catch((err) => {
+        errorToast("Can not load history.");
       });
   }, []);
   return (
