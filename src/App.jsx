@@ -19,7 +19,7 @@ function App() {
       });
   }, []);
   return (
-    <div className="App h-screen w-screen">
+    <div className="App w-screen h-screen">
       <Navbar />
       <Routes>
         <Route path="/" element={<CardsPage />} />

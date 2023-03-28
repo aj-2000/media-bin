@@ -785,6 +785,8 @@ __metadata:
     daisyui: "npm:^2.51.5"
     moment: "npm:^2.29.4"
     postcss: "npm:^8.4.21"
+    prettier: "npm:^2.8.7"
+    prettier-plugin-tailwind-css: "npm:^1.5.0"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-icons: "npm:^4.8.0"
@@ -1842,6 +1844,24 @@ __metadata:
     picocolors: "npm:^1.0.0"
     source-map-js: "npm:^1.0.2"
   checksum: 4fb944abed714e5aa88c76b6eae19b293e84ced7ea4162fe0da6ab5215ded572330df93ce3bb5073ee18a9ad0122a6a65e3000897dc3a828e96281d8b3e1f91e
+  languageName: node
+  linkType: hard
+
+"prettier-plugin-tailwind-css@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "prettier-plugin-tailwind-css@npm:1.5.0"
+  dependencies:
+    prettier: "npm:^2.0.5"
+  checksum: 270e9d637fe1a4babe69e8ec004278a56711b95dbb1e511cda2de276fbd74e992156f7ac93d265b35bda0e17faef0c8ff9f4decb9745fed99fa1f011a59f476c
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.0.5, prettier@npm:^2.8.7":
+  version: 2.8.7
+  resolution: "prettier@npm:2.8.7"
+  bin:
+    prettier: bin-prettier.js
+  checksum: ec15b2e0a2a34a4987cca4ee72b2df56c7f4a4c62322d9a0f3c9efccb2cc0e3efdb791bb2764f2268e69e05946dc72108e5b5957d4bb2c1a41a11733b8b09153
   languageName: node
   linkType: hard
 

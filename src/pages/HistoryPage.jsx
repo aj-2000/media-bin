@@ -32,7 +32,7 @@ export const HistoryPage = () => {
   }
   if (!loading) {
     return (
-      <div className="flex flex-col items-center gap-4 p-4 md:p-8">
+      <div className="md:p-8 flex flex-col items-center gap-4 p-4">
         {history.map((history) => (
           <HistoryItem key={history.id} history={history} />
         ))}

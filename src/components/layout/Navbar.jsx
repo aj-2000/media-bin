@@ -14,7 +14,7 @@ const Navbar = () => {
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="w-5 h-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -29,7 +29,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-compact dropdown-content bg-base-100 rounded-box w-52 p-2 mt-3 shadow"
             >
               <li className={`${pathname === "/" && "bg-primary rounded-md"}`}>
                 <Link to="/">Cards</Link>
@@ -39,11 +39,11 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className="lg:flex btn btn-ghost normal-case text-xl hidden">
+          <a className="lg:flex btn btn-ghost hidden text-xl normal-case">
             Convin
           </a>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center lg:flex hidden">
           <ul className="menu menu-horizontal px-1">
             <li className={`${pathname === "/" && "bg-primary rounded-md"}`}>
               <Link to="/">Cards</Link>
@@ -53,7 +53,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="flex gap-4 items-center navbar-end">
+        <div className="navbar-end flex items-center gap-4">
           <label htmlFor="add-card-modal" className="btn btn-sm gap-2">
             <BsPlusLg className="font-extrabold" size={20} /> <span>Card</span>
           </label>
@@ -67,10 +67,10 @@ const Navbar = () => {
       {/* Put this part before </body> tag */}
       <input type="checkbox" id="add-card-modal" className="modal-toggle" />
       <div className="modal">
-        <div className="modal-box relative  max-w-sm">
+        <div className="modal-box relative max-w-sm">
           <label
             htmlFor="add-card-modal"
-            className="btn btn-sm btn-circle absolute right-2 top-2 "
+            className="btn btn-sm btn-circle right-2 top-2 absolute"
           >
             ✕
           </label>
@@ -82,10 +82,10 @@ const Navbar = () => {
       {/* Put this part before </body> tag */}
       <input type="checkbox" id="add-bucket-modal" className="modal-toggle" />
       <div className="modal">
-        <div className="modal-box relative  max-w-sm">
+        <div className="modal-box relative max-w-sm">
           <label
             htmlFor="add-bucket-modal"
-            className="btn btn-sm btn-circle absolute right-2 top-2 "
+            className="btn btn-sm btn-circle right-2 top-2 absolute"
           >
             ✕
           </label>
@@ -96,5 +96,4 @@ const Navbar = () => {
     </>
   );
 };
-
 export default Navbar;

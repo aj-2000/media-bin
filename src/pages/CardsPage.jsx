@@ -33,7 +33,7 @@ export const CardsPage = () => {
   }
   if (!loading) {
     return (
-      <div className="flex flex-wrap justify-center items-center gap-8 p-4 md:p-8">
+      <div className="md:p-8 flex flex-wrap items-center justify-center gap-8 p-4">
         {cards.map((card) => (
           <Card key={card.id} card={card} />
         ))}

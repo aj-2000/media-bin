@@ -36,11 +36,11 @@ const Card = ({ card }) => {
       </div>
       <div className="flex flex-col gap-4 p-4 pl-2">
         <div className="flex flex-col gap-2">
-          <div className="text-2xl font-bold text-secondary">{card?.name}</div>
+          <div className="text-secondary text-2xl font-bold">{card?.name}</div>
           <div className="text-md font-bold">{card?.bucketName}</div>
         </div>
 
-        <div className="flex justify-between items-center gap-2">
+        <div className="flex items-center justify-between gap-2">
           <label
             htmlFor="iframe-modal"
             onClick={() => {
@@ -49,7 +49,7 @@ const Card = ({ card }) => {
             }}
             className="btn btn-sm gap-2"
           >
-            <BiPlay className="hidden md:block" size={25} />
+            <BiPlay className="md:block hidden" size={25} />
             <span>Play</span>
           </label>
 
@@ -58,9 +58,9 @@ const Card = ({ card }) => {
               dispatch(setEditingCart(card));
             }}
             htmlFor="edit-card-modal"
-            className="btn gap-2 btn-sm"
+            className="btn btn-sm gap-2"
           >
-            <BiEdit className="hidden md:block" size={20} />
+            <BiEdit className="md:block hidden" size={20} />
             <span>Edit</span>
           </label>
           <button
@@ -75,7 +75,7 @@ const Card = ({ card }) => {
             }}
             className="btn btn-sm gap-2"
           >
-            <MdDelete className="hidden md:block" size={20} />
+            <MdDelete className="md:block hidden" size={20} />
             <span>Delete</span>
           </button>
         </div>
@@ -83,13 +83,13 @@ const Card = ({ card }) => {
       {/* Put this part before </body> tag */}
       <input type="checkbox" id="iframe-modal" className="modal-toggle" />
       <div className="modal">
-        <div className="modal-box relative ">
+        <div className="modal-box relative">
           <label
             onClick={() => {
               dispatch(setIframeLink(""));
             }}
             htmlFor="iframe-modal"
-            className="btn btn-sm btn-circle absolute right-2 top-2 "
+            className="btn btn-sm btn-circle right-2 top-2 absolute"
           >
             ✕
           </label>
@@ -100,13 +100,13 @@ const Card = ({ card }) => {
       {/* Put this part before </body> tag */}
       <input type="checkbox" id="edit-card-modal" className="modal-toggle" />
       <div className="modal">
-        <div className="modal-box relative  max-w-sm">
+        <div className="modal-box relative max-w-sm">
           <label
             onClick={() => {
               dispatch(setEditingCart(null));
             }}
             htmlFor="edit-card-modal"
-            className="btn btn-sm btn-circle absolute right-2 top-2 "
+            className="btn btn-sm btn-circle right-2 top-2 absolute"
           >
             ✕
           </label>
@@ -117,5 +117,4 @@ const Card = ({ card }) => {
     </div>
   );
 };
-
 export default Card;

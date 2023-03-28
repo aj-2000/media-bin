@@ -4,7 +4,7 @@ const Iframe = () => {
   const iframeLink = useSelector((state) => state.cards.iframeLink);
 
   return (
-    <div className=" border-2 border-base-200 rounded shadow-sm shadow-base-100 mt-4">
+    <div className=" border-base-200 shadow-base-100 mt-4 border-2 rounded shadow-sm">
       <video className="w-full h-full" src={iframeLink} autoPlay controls />
     </div>
   );

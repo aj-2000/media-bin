@@ -12,10 +12,7 @@ const HistoryItem = ({ history }) => {
         )}
       </div>
       <div className="flex flex-col gap-2 p-4 pl-2">
-        <span
-          className="text-2xl font-bold text-secondary
-        "
-        >
+        <span className="text-secondary text-2xl font-bold">
           {history?.cardName}
         </span>
         <div className="flex flex-col font-bold">
@@ -29,5 +26,4 @@ const HistoryItem = ({ history }) => {
     </div>
   );
 };
-
 export default HistoryItem;
